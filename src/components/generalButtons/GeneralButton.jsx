@@ -1,9 +1,11 @@
 import React from "react";
 
 
-const GeneralButton = ({text}) => {
+const GeneralButton = ({text,statusBar,custom}) => {
+  const button = ['a', 'b', 'c', 'd','']
+  const cust=(text==="Customer"?['Add','Search','Update','Deactivate','']:text==="Order"?button:text==="Stock"?button:text==="Bill"?button:[])
   return (
-    <div style={styles.floatingDiv}>
+    <div style={styles.floatingDiv} onClick={()=>{statusBar(text);custom(cust)}}>
       {text}
     </div>
   );

@@ -1,18 +1,29 @@
 import React from "react";
 
+const SpecificButton = ({ customer}) => {
+  const buttonS = [];
 
-const SpecificButton = ({text}) => {
+  const numberOfButtons = Math.min(customer.length, 5);
+
+  for (let i = 0; i < numberOfButtons; i++) {
+    buttonS.push(
+      <div key={i} style={styles.floatingDiv}>
+        {customer[i]}
+      </div>
+    );
+  }
+
   return (
-    <div style={styles.floatingDiv}>
-      {text}
-    </div>
+    <>
+      {buttonS}
+    </>
   );
 };
 
 const styles = {
   floatingDiv: {
-    width: "20%",
-    height: "20%",
+    width: "10vw",
+    height: "15vh",
     backgroundColor: "#f0f0f0",
     borderRadius: "15px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
@@ -20,4 +31,4 @@ const styles = {
   },
 };
 
-export default SpecificButton;;
+export default SpecificButton;

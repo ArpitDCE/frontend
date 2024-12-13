@@ -1,19 +1,16 @@
 import React from 'react';
 
-const StatusBar = () => {
+const StatusBar = ({text}) => {
   return (
     <>
-      <div style={styles.statusbar}>StatusBar</div>
+      <div style={styles.statusbar}>{text?text:"StatusBar"}</div>
     </>
   );
 };
 
 const styles = {
   statusbar: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: "#f1f1f1",
+    //backgroundColor: "#f1f1f1",
     padding: "10px",
     fontWeight: "bold",
   },

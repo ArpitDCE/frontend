@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import GeneralButton from './components/general/GeneralButton';
-import SpecificButton from './components/specific/SpecificButton';
+import GeneralButton from './components/main/general/GeneralButton';
+import SpecificButton from './components/main/specific/SpecificButton';
 import Header from './components/header/Header';
-import StatusBar from './components/statusbar/StatusBar';
+import StatusBar from './components/main/statusbar/StatusBar';
 import Add from "./components/modules/customer/add/Add";
 import Search from "./components/modules/customer/search/Search";
 import Update from "./components/modules/customer/update/Update";

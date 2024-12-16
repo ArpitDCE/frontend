@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const GeneralButton = ({link,text,statusBar,custom,onShowComponent}) => {
-  const button = ['a', 'b', 'c', 'd','']
+  const button = ['a', 'b', 'c', 'd','e']
   const cust=(text==="Customer"?['Add','Search','Update','Deactivate','']:text==="Order"?button:text==="Stock"?button:text==="Bill"?button:[])
   return (
     <div style={styles.floatingDiv} onClick={()=>{statusBar(text);custom(cust);onShowComponent(text);}}>

@@ -1,12 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-
-const GeneralButton = ({text,statusBar,custom}) => {
+const GeneralButton = ({link,text,statusBar,custom,onShowComponent}) => {
   const button = ['a', 'b', 'c', 'd','']
   const cust=(text==="Customer"?['Add','Search','Update','Deactivate','']:text==="Order"?button:text==="Stock"?button:text==="Bill"?button:[])
   return (
-    <div style={styles.floatingDiv} onClick={()=>{statusBar(text);custom(cust)}}>
-      {text}
+    <div style={styles.floatingDiv} onClick={()=>{statusBar(text);custom(cust);onShowComponent(text);}}>
+      <Link to={link}>{text}</Link>
     </div>
   );
 };
@@ -22,4 +22,4 @@ const styles = {
   },
 };
 
-export default GeneralButton;;
+export default GeneralButton;

@@ -1,19 +1,19 @@
 import React from 'react';
-
+import "../../index.css"
 const StatusBar = ({text}) => {
   return (
     <>
-      <div style={styles.statusbar}>{text?text:"StatusBar"}</div>
+      <div className="statusbar-container">
+    <div className="statusbar">
+        <div>Screen: {text ? text : "StatusBar"}</div>
+        <div>Status: 200</div>
+        <div>Message: done</div>
+    </div>
+    </div>
+      
     </>
   );
 };
 
-const styles = {
-  statusbar: {
-    //backgroundColor: "#f1f1f1",
-    padding: "10px",
-    fontWeight: "bold",
-  },
-};
 
 export default StatusBar;

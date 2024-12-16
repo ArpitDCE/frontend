@@ -23,9 +23,9 @@ const Customer = () => {
   };
 
   return (
-    <div style={styles.wrapper}>
-      <form onSubmit={handleSubmit} style={styles.formContainer}>
-        <div style={styles.inputContainer}>
+    <div className="wrapper">
+      <form onSubmit={handleSubmit} className="form-container">
+        <div className="input-container">
           <label>Name</label>
           <input
             type="text"
@@ -33,11 +33,11 @@ const Customer = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Name"
-            style={styles.inputField}
+            className="input-field"
           />
         </div>
 
-        <div style={styles.inputContainer}>
+        <div className="input-container">
           <label>Phone</label>
           <input
             type="text"
@@ -45,11 +45,11 @@ const Customer = () => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="Phone"
-            style={styles.inputField}
+            className="input-field"
           />
         </div>
 
-        <div style={styles.inputContainer}>
+        <div className="input-container">
           <label>Address Line 1</label>
           <input
             type="text"
@@ -57,11 +57,11 @@ const Customer = () => {
             value={formData.addressLine1}
             onChange={handleChange}
             placeholder="Address Line 1"
-            style={styles.inputField}
+            className="input-field"
           />
         </div>
 
-        <div style={styles.inputContainer}>
+        <div className="input-container">
           <label>Address Line 2</label>
           <input
             type="text"
@@ -69,11 +69,11 @@ const Customer = () => {
             value={formData.addressLine2}
             onChange={handleChange}
             placeholder="Address Line 2"
-            style={styles.inputField}
+            className="input-field"
           />
         </div>
 
-        <div style={styles.inputContainer}>
+        <div className="input-container">
           <label>Locality</label>
           <input
             type="text"
@@ -81,11 +81,11 @@ const Customer = () => {
             value={formData.locality}
             onChange={handleChange}
             placeholder="Locality/Colony"
-            style={styles.inputField}
+            className="input-field"
           />
         </div>
 
-        <div style={styles.inputContainer}>
+        <div className="input-container">
           <label>Township</label>
           <input
             type="text"
@@ -93,11 +93,11 @@ const Customer = () => {
             value={formData.township}
             onChange={handleChange}
             placeholder="Town/Village"
-            style={styles.inputField}
+            className="input-field"
           />
         </div>
 
-        <div style={styles.inputContainer}>
+        <div className="input-container">
           <label>Pincode</label>
           <input
             type="text"
@@ -105,17 +105,17 @@ const Customer = () => {
             value={formData.pincode}
             onChange={handleChange}
             placeholder="Pincode"
-            style={styles.inputField}
+            className="input-field"
           />
         </div>
 
-        <div style={styles.inputContainer}>
+        <div className="input-container">
           <label>City</label>
           <select
             name="city"
             value={formData.city}
             onChange={handleChange}
-            style={styles.selectInput}
+            className="select-input"
           >
             <option value="">Select</option>
             <option value="City 1">City 1</option>
@@ -132,52 +132,5 @@ const Customer = () => {
   );
 };
 
-const styles = {
-  wrapper: {
-    height: "60vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    overflowY: "auto",
-    backgroundColor: "#f9f9f9",
-  },
-  formContainer: {
-    display: "flex",
-    flexDirection: "column",
-    width: "90%",
-    maxWidth: "400px",
-    padding: "15px",
-    border: "1px solid #ccc",
-    borderRadius: "5px",
-    backgroundColor: "#fff",
-    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-  },
-  inputContainer: {
-    marginBottom: "10px",
-    display: "flex",
-    flexDirection: "column",
-  },
-  inputField: {
-    padding: "8px",
-    fontSize: "14px",
-    borderRadius: "4px",
-    border: "1px solid #ccc",
-  },
-  selectInput: {
-    height: "35px",
-    fontSize: "14px",
-    borderRadius: "4px",
-    border: "1px solid #ccc",
-  },
-  submitButton: {
-    backgroundColor: "#007BFF",
-    color: "#fff",
-    border: "none",
-    padding: "10px",
-    borderRadius: "5px",
-    cursor: "pointer",
-    fontSize: "16px",
-  },
-};
 
 export default Customer;

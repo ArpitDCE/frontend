@@ -1,5 +1,5 @@
 import React from "react";
-import "../../index.css";
+import '../../../index.css';
 
 const GeneralButton = ({text,statusBar,custom}) => {
   const customer=['Add','Search','Update','Deactivate']

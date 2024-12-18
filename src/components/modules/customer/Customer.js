@@ -124,7 +124,8 @@ const Customer = () => {
           </select>
         </div>
 
-        <button type="submit" style={styles.submitButton}>
+        <button type="submit"   style={styles.submitButton}>
+        
           Submit
         </button>
       </form>
